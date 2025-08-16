@@ -1,0 +1,62 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-background) 0%, var(--color-muted) 100%);
+  padding: 1rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 10px 25px -5px color-mix(in srgb, black 10%, transparent),
+              0 4px 6px -2px color-mix(in srgb, black 5%, transparent);
+
+  @media (max-width: 640px) {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--color-foreground);
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+    color: var(--color-muted-foreground);
+    line-height: 1.5;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.buttonContainer {
+  margin-top: 0.5rem;
+}
+
+.errorAlert {
+  padding: 0.75rem;
+  background-color: color-mix(in srgb, var(--color-destructive) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-destructive) 30%, transparent);
+  border-radius: 0.375rem;
+  color: var(--color-destructive);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
